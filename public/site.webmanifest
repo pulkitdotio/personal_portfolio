@@ -1,0 +1,16 @@
+{
+  "name": "Pulkit Sharma | Portfolio",
+  "short_name": "Pulkit",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "display": "standalone",
+  "start_url": "/"
+}

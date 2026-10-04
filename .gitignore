@@ -1,0 +1,88 @@
+# --------------------------------------------------
+# Dependencies / package-manager cache
+# --------------------------------------------------
+node_modules/
+.pnpm-store/
+
+# --------------------------------------------------
+# Logs
+# --------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --------------------------------------------------
+# Next.js / build / test output
+# --------------------------------------------------
+.next/
+out/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+.cache/
+
+# --------------------------------------------------
+# Environment / local-only configuration
+# Keep the example env file in Git.
+# --------------------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+
+# --------------------------------------------------
+# Vercel local metadata
+# --------------------------------------------------
+.vercel/
+
+# --------------------------------------------------
+# OS / editor files
+# --------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --------------------------------------------------
+# Local AI / agent tooling
+# --------------------------------------------------
+.agents/
+.codex/
+.claude/
+.cursor/
+skills/
+skills-lock.json
+
+# --------------------------------------------------
+# Internal portfolio/Codex documentation
+# Ignore Markdown files ONLY at the repository root.
+# This intentionally keeps runtime project Markdown such as
+# src/data/projects/sentinel.md tracked by Git.
+# --------------------------------------------------
+/*.md
+
+# --------------------------------------------------
+# Migration/source assets kept only for local reference.
+# The assets actually used by the site live under public/.
+# --------------------------------------------------
+/assets/
+
+# --------------------------------------------------
+# Local archives / temporary files
+# --------------------------------------------------
+*.zip
+*.tmp
+*.temp
