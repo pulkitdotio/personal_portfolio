@@ -24,11 +24,13 @@ const ThemeToggle = () => {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
-      const target = e.target as HTMLElement;
-      const tag = target.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || target.isContentEditable || target.closest('[role="dialog"]'))
+      const key = typeof e.key === "string" ? e.key.toLowerCase() : "";
+      if (!key) return;
+      const target = e.target;
+      if (target instanceof HTMLElement &&
+        (target.matches('input, textarea, select') || target.isContentEditable || target.closest('[role="dialog"]')))
         return;
-      if (e.key.toLowerCase() === "d") toggleTheme();
+      if (key === "d") toggleTheme();
     },
     [toggleTheme],
   );

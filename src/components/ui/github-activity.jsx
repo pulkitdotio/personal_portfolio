@@ -74,6 +74,7 @@ const MONTH_NAMES = [
 
 function toMonthLabels(weeks) {
   const labels = weeks.map(() => null);
+  if (weeks.every((week) => week.every((day) => day.placeholder))) return labels;
   const monthAt = (index) => weeks[index]?.[0]?.date.slice(5, 7);
 
   let start = 0;
@@ -193,10 +194,11 @@ function useGitHubUser(login) {
 }
 
 function emptyDays(weeks) {
-  const today = new Date();
+  // Stable non-data keys keep the loading shell identical across SSR/time zones.
+  const today = new Date("2000-01-02T00:00:00Z");
   return Array.from({ length: weeks * 7 }, (_, i) => {
     const date = new Date(today);
-    date.setDate(date.getDate() - (weeks * 7 - 1 - i));
+    date.setUTCDate(date.getUTCDate() - (weeks * 7 - 1 - i));
     return {
       date: date.toISOString().slice(0, 10),
       count: 0,
@@ -324,6 +326,7 @@ const ContributionGrid = ({
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{
             ...LABEL_REVEAL,
+            duration: reduceMotion ? 0 : LABEL_REVEAL.duration,
             delay: reduceMotion ? 0 : sweepEnd,
           }}>
           {toMonthLabels(visible).map((month, index) => (
@@ -355,6 +358,7 @@ const ContributionGrid = ({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   ...CELL_FADE,
+                  duration: reduceMotion ? 0 : CELL_FADE.duration,
                   delay: reduceMotion ? 0 : weekIndex * COLUMN_STAGGER,
                 }}>
                 <div
@@ -484,7 +488,12 @@ const GitHubActivity = ({
   style,
   ...props
 }) => {
-  const reduceMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion();
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  // Server and first client markup agree; animate only after hydration and
+  // only when the visitor allows it.
+  const reduceMotion = !mounted || prefersReducedMotion;
   const uid = React.useId();
   const [openState, setOpenState] = React.useState(defaultOpen);
 

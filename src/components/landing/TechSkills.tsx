@@ -27,7 +27,7 @@ const TechSkills = () => {
               >
                 {/* Category Column with Dotted Right Border */}
                 <div className="flex w-full shrink-0 items-center gap-3.5 border-b border-neutral-200/60 px-5 py-4 sm:w-64 sm:border-r sm:border-b-0 sm:border-dashed sm:border-neutral-300 sm:py-6 dark:sm:border-neutral-800">
-                  <span className="font-mono text-sm font-medium text-neutral-400 dark:text-neutral-500">
+                  <span className="font-mono text-sm font-medium text-neutral-500 dark:text-neutral-400">
                     {category.id}
                   </span>
                   <span className="text-sm font-medium text-neutral-600 md:text-base dark:text-neutral-300">

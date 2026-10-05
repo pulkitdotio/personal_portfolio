@@ -10,10 +10,13 @@ import { Github } from '@/lib/techIcons';
 const ProjectCard = ({
   completed = ProjectCardData,
   limit,
+  headingLevel = 3,
 }: {
   completed?: any[];
   limit?: number;
+  headingLevel?: 2 | 3;
 }) => {
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const displayedProjects = useMemo(() => {
     const arr = limit ? [...completed].slice(-limit) : [...completed];
     return arr.reverse();
@@ -58,14 +61,16 @@ const ProjectCard = ({
                           src={items.img.src}
                           width={1200}
                           height={630}
+                          sizes="(min-width: 1024px) 350px, (min-width: 768px) 308px, (min-width: 640px) calc(50vw - 74px), calc(100vw - 98px)"
+                          loading={index === 0 ? 'eager' : 'lazy'}
                           className="h-52 w-full rounded-lg object-cover object-top"
                         />
 
                         {/* Header with Title and Pulsing Status */}
                         <div className="mt-2.5 pt-0.5 flex items-center justify-between px-1">
-                          <h3 className="group-hover/card:text-primary text-lg leading-snug font-bold">
+                          <Heading className="group-hover/card:text-primary text-lg leading-snug font-bold">
                             {items.title}
-                          </h3>
+                          </Heading>
 
                           {/* Status Badge */}
                           <div className="flex shrink-0 items-center gap-1.5 select-none">

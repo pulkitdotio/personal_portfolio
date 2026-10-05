@@ -47,7 +47,7 @@ const Projects = ({ projects = [] }: { projects?: ProjectItem[] }) => {
         <div>
           <SectionHeading
             as="p"
-            classname=" text-neutral-400 dark:text-neutral-500 font-medium "
+            classname=" text-neutral-500 dark:text-neutral-500 font-medium "
             heading="Projects"
           />
           <h1 className="screen-line-bottom px-4 text-3xl font-semibold tracking-tight text-balance">
@@ -148,7 +148,7 @@ const Projects = ({ projects = [] }: { projects?: ProjectItem[] }) => {
       </div>
       <RepeatSeparator cn="dark:opacity-40" />
       <div>
-        <ProjectCard completed={filteredProjects} />
+        <ProjectCard completed={filteredProjects} headingLevel={2} />
       </div>
     </Container>
   );

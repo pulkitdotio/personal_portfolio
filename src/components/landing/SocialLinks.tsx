@@ -51,7 +51,8 @@ const SocialLinks = () => {
       return (
         <Image
           src={item.icon}
-          alt={item.name}
+          alt=""
+          aria-hidden="true"
           className="size-8 rounded-lg object-cover select-none"
           width={32}
           height={32}

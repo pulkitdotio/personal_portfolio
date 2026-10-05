@@ -45,7 +45,8 @@ export function CommandMany({
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey) && !e.repeat) {
+      const key = typeof e.key === "string" ? e.key.toLowerCase() : "";
+      if (key === "k" && (e.metaKey || e.ctrlKey) && !e.repeat) {
         e.preventDefault();
         setOpen((open) => !open);
       }
@@ -59,10 +60,13 @@ export function CommandMany({
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!open) return;
       if (e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
-      const target = e.target as HTMLElement;
-      if (target.matches('input, textarea, select') || target.isContentEditable) return;
+      const key = typeof e.key === "string" ? e.key.toLowerCase() : "";
+      if (!key) return;
+      const target = e.target;
+      if (target instanceof HTMLElement &&
+        (target.matches('input, textarea, select') || target.isContentEditable)) return;
 
-      switch (e.key.toLowerCase()) {
+      switch (key) {
         case "h":
           setOpen(false);
           router.push("/");
@@ -139,7 +143,7 @@ export function CommandMany({
               </CommandItem>
             </CommandGroup>
 
-            <CommandSeparator />
+            <CommandSeparator aria-hidden="true" />
             <CommandGroup heading="Projects">
               {ProjectCardData.map((project) => (
                 <CommandItem
@@ -155,7 +159,7 @@ export function CommandMany({
               ))}
             </CommandGroup>
 
-            <CommandSeparator />
+            <CommandSeparator aria-hidden="true" />
             <CommandGroup heading="Theme">
               <CommandItem
                 onSelect={() => {

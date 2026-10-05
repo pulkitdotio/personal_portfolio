@@ -83,7 +83,7 @@ export function ZoomableImage({
             alt={alt}
             fill
             sizes="(min-width: 768px) 683px, 100vw"
-            priority={priority}
+            preload={priority}
             className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
           />
         ) : (
@@ -92,7 +92,7 @@ export function ZoomableImage({
             alt={alt}
             width={width}
             height={height}
-            priority={priority}
+            preload={priority}
             className={cn("h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.015]", className)}
           />
         )}

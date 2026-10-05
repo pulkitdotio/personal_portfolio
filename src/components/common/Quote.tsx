@@ -19,7 +19,7 @@ export const Quote = () => {
   const { quote, author } = currentQuote;
 
   return (
-    <div data-site-quote>
+    <div data-site-quote role="region" aria-label="Quote">
       <RepeatSeparator />
       <Container >
         <div>

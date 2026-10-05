@@ -1,0 +1,11 @@
+# pnpm 11 reads install settings here; .npmrc is reserved for registry/auth.
+autoInstallPeers: true
+strictPeerDependencies: false
+
+# Preserve the existing tooling/type hoist policy.
+publicHoistPattern:
+  - '*types*'
+  - '*eslint*'
+  - '*prettier*'
+  - '*postcss*'
+  - '*tailwindcss*'

@@ -67,7 +67,7 @@ export default function Contact() {
         <div>
           <SectionHeading
             as="p"
-            classname=" text-neutral-400 dark:text-neutral-500 font-medium "
+            classname=" text-neutral-500 dark:text-neutral-500 font-medium "
             heading="Contact"
           />
           <h1 className="screen-line-bottom px-4 text-3xl font-semibold tracking-tight text-balance">
