@@ -73,7 +73,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
 
-      <div className="mx-auto max-w-3xl space-y-10">
+      <div className="mx-auto max-w-3xl space-y-10 lg:max-w-[715px]">
         {/* Profile identity */}
         <header className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">

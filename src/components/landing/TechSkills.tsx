@@ -5,6 +5,7 @@ import {
   TailwindCss, TypeScript, Shadcn, Git, Docker, Python, Css, Html, Github,
 } from '@/lib/techIcons';
 import { Supabase } from '@/components/icons/tech/Supabase';
+import { Java, Redis, TensorFlow, Pandas, ScikitLearn, Postman, VSCode, Vercel } from '@/components/icons/tech/StackLogos';
 import RepeatSeparator from '../ui/repeat-separator';
 
 const TechSkills = () => {
@@ -44,9 +45,8 @@ const TechSkills = () => {
                       rel="noopener noreferrer"
                       className="group flex cursor-pointer items-center gap-2 rounded-full border border-neutral-200/90 bg-neutral-50/90 px-3 py-1.5 font-mono text-xs text-neutral-700 shadow-2xs  select-none hover:border-neutral-300 hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-300 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/80"
                     >
-                      {/* Monochrome icon with color on hover */}
                       {skill.icon && (
-                        <span className="flex size-4 shrink-0 items-center justify-center opacity-70 grayscale transition-[opacity,filter] duration-200 group-hover:opacity-100 group-hover:grayscale-0 [&_svg]:size-3.5">
+                        <span aria-hidden="true" className={`flex size-4 shrink-0 items-center justify-center [&_svg]:size-3.5 ${skill.title === 'Next.js' ? 'dark:invert' : ''}`}>
                           {skill.icon}
                         </span>
                       )}
@@ -75,7 +75,7 @@ const StackCategories = [
       { title: 'TypeScript', icon: <TypeScript />, href: 'https://www.typescriptlang.org/' },
       { title: 'JavaScript', icon: <JavaScript />, href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
       { title: 'Python', icon: <Python />, href: 'https://www.python.org/' },
-      { title: 'Java', icon: null, href: 'https://dev.java/' },
+      { title: 'Java', icon: <Java />, href: 'https://dev.java/' },
       { title: 'HTML', icon: <Html />, href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
       { title: 'CSS', icon: <Css />, href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
     ],
@@ -105,7 +105,7 @@ const StackCategories = [
     skills: [
       { title: 'PostgreSQL', icon: <PostgreSQL />, href: 'https://www.postgresql.org/' },
       { title: 'MongoDB', icon: <MongoDB />, href: 'https://www.mongodb.com/' },
-      { title: 'Redis', icon: null, href: 'https://redis.io/' },
+      { title: 'Redis', icon: <Redis />, href: 'https://redis.io/' },
       { title: 'Supabase', icon: <Supabase />, href: 'https://supabase.com/' },
     ],
   },
@@ -113,9 +113,9 @@ const StackCategories = [
     id: '05',
     category: 'AI / ML',
     skills: [
-      { title: 'TensorFlow', icon: null, href: 'https://www.tensorflow.org/' },
-      { title: 'Pandas', icon: null, href: 'https://pandas.pydata.org/' },
-      { title: 'scikit-learn', icon: null, href: 'https://scikit-learn.org/' },
+      { title: 'TensorFlow', icon: <TensorFlow />, href: 'https://www.tensorflow.org/' },
+      { title: 'Pandas', icon: <Pandas />, href: 'https://pandas.pydata.org/' },
+      { title: 'scikit-learn', icon: <ScikitLearn />, href: 'https://scikit-learn.org/' },
     ],
   },
   {
@@ -125,9 +125,9 @@ const StackCategories = [
       { title: 'Git', icon: <Git />, href: 'https://git-scm.com/' },
       { title: 'GitHub', icon: <Github />, href: 'https://github.com/' },
       { title: 'Docker', icon: <Docker />, href: 'https://www.docker.com/' },
-      { title: 'Postman', icon: null, href: 'https://www.postman.com/' },
-      { title: 'VS Code', icon: null, href: 'https://code.visualstudio.com/' },
-      { title: 'Vercel', icon: null, href: 'https://vercel.com/' },
+      { title: 'Postman', icon: <Postman />, href: 'https://www.postman.com/' },
+      { title: 'VS Code', icon: <VSCode />, href: 'https://code.visualstudio.com/' },
+      { title: 'Vercel', icon: <Vercel />, href: 'https://vercel.com/' },
     ],
   },
 ];

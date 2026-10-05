@@ -184,7 +184,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           className="mx-auto w-full"
         >
           <div data-slot="doc-content-col" className="mx-auto w-full">
-            <div data-slot="prose" className="prose dark:prose-invert w-full px-4 pt-12">
+            <div data-slot="prose" className="prose dark:prose-invert w-full px-4 pt-12 lg:mx-auto lg:max-w-[715px]">
               {/* Project description (subheading) */}
               <p className="text-muted-foreground mb-6 text-base leading-relaxed font-normal text-wrap sm:text-base">
                 {projectMeta.description}
