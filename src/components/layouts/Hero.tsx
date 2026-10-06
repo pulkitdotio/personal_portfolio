@@ -5,16 +5,10 @@ import BioText from '../landing/BioText';
 import SocialLinks from '../landing/SocialLinks';
 import RepeatSeparator from '../ui/repeat-separator';
 import Image from 'next/image';
-import { Sirin_Stencil } from 'next/font/google';
+import { sirinStencil } from '@/lib/fonts';
 import { MapPin } from 'lucide-react';
 import { RotatingText } from '../ui/rotating-text';
 import IndiaClock from '../landing/IndiaClock';
-
-const sirinStencil = Sirin_Stencil({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 const roles = ['Full Stack Developer', 'Software Engineer', 'MERN Stack Builder'];
 

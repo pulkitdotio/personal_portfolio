@@ -1,4 +1,5 @@
 import { profile } from '@/config/site';
+import { sirinStencil } from '@/lib/fonts';
 import SendIcon from '@/components/icons/social/SendIcon';
 import Cv from '@/components/icons/social/Cv';
 
@@ -70,7 +71,7 @@ const SocialLinks = () => {
 
   return (
     <>
-      <h2 className="px-5 py-0.5 text-3xl font-normal">Connect</h2>
+      <h2 className={`${sirinStencil.className} px-5 py-0.5 text-3xl leading-9 font-normal`}>Connect</h2>
       <div className="w-full">
         <div className="relative mt-2 w-full">
           {/* Absolute Vertical Dividers Overlay */}

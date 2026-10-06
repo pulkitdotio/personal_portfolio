@@ -5,7 +5,7 @@ const BioText = () => {
     <>
       <SectionHeading heading="About" classname="max-sm:px-2" />
       <div className="space-y-5 p-8 max-sm:px-2">
-        <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-base font-normal whitespace-pre-wrap text-neutral-800 max-[641px]:text-[15px]/6 md:text-base dark:text-neutral-300">
+        <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-base font-normal whitespace-pre-wrap text-muted-foreground max-[641px]:text-[15px]/6 md:text-base">
           <ul className="list-disc space-y-2 max-sm:pl-3">
             <li>
               I'm a{' '}
