@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav aria-label="Main navigation" className="bg-background dark:bg-[#050505] sticky top-0 isolate z-50 pt-1">
+      <nav aria-label="Main navigation" className="bg-background sticky top-0 isolate z-50 pt-1">
         <Container>
           <div>
             <motion.div

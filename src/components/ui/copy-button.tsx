@@ -76,7 +76,7 @@ export default function CopyButton({ text, className }: CopyButtonProps) {
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.97 }}
       transition={{ duration: 0.12, ease: 'easeOut' }}
-      className={`absolute top-3.5 right-3.5 z-10 flex size-8 items-center justify-center rounded-md border border-neutral-800 bg-neutral-950/90 text-neutral-400 transition-colors hover:border-neutral-700 hover:bg-neutral-900 hover:text-neutral-200 cursor-pointer select-none ${className || ''}`}
+      className={`absolute top-3.5 right-3.5 z-10 flex size-8 items-center justify-center rounded-md border border-neutral-800 bg-neutral-950/90 dark:bg-background/90 text-neutral-400 transition-colors hover:border-neutral-700 hover:bg-neutral-900 dark:hover:bg-accent hover:text-neutral-200 cursor-pointer select-none ${className || ''}`}
       aria-label="Copy code"
     >
       <CopyIcon copied={copied} className="size-4" />

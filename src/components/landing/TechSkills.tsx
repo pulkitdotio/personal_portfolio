@@ -43,7 +43,7 @@ const TechSkills = () => {
                       href={skill.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex cursor-pointer items-center gap-2 rounded-full border border-neutral-200/90 bg-neutral-50/90 px-3 py-1.5 font-mono text-xs text-neutral-700 shadow-2xs  select-none hover:border-neutral-300 hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-300 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/80"
+                      className="group flex cursor-pointer items-center gap-2 rounded-full border border-neutral-200/90 bg-neutral-50/90 px-3 py-1.5 font-mono text-xs text-neutral-700 shadow-2xs  select-none hover:border-neutral-300 hover:bg-neutral-100 dark:border-neutral-800 dark:bg-background/60 dark:text-neutral-300 dark:hover:border-neutral-700 dark:hover:bg-accent/80"
                     >
                       {skill.icon && (
                         <span aria-hidden="true" className={`flex size-4 shrink-0 items-center justify-center [&_svg]:size-3.5 ${skill.title === 'Next.js' ? 'dark:invert' : ''}`}>

@@ -282,7 +282,7 @@ export const ProjectComponents = {
       <div className="group relative my-6 w-full">
         <CopyButton text={codeText} />
         <pre
-          className="bg-neutral-950 dark:bg-neutral-900/95 border border-neutral-800 overflow-x-auto rounded-xl p-4 sm:p-6 text-neutral-100 text-xs sm:text-sm font-mono leading-relaxed [&_code]:bg-transparent! [&_code]:border-none! [&_code]:p-0! [&_code]:rounded-none! [&_code]:text-inherit!"
+          className="bg-neutral-950 dark:bg-background/95 border border-neutral-800 overflow-x-auto rounded-xl p-4 sm:p-6 text-neutral-100 text-xs sm:text-sm font-mono leading-relaxed [&_code]:bg-transparent! [&_code]:border-none! [&_code]:p-0! [&_code]:rounded-none! [&_code]:text-inherit!"
           {...props}
         >
           {children}

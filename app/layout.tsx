@@ -171,7 +171,7 @@ export default function RootLayout({
           <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[110] focus:rounded focus:bg-background focus:p-3">Skip to content</a>
           <ScrollToTop />
           <Analytics />
-          <div className="min-h-screen dark:bg-black/50">
+          <div className="min-h-screen bg-background">
           <Container>
               <Layout>
                 <main id="main-content">{children}</main>

@@ -545,7 +545,7 @@ const GitHubActivity = ({
     <div
       data-slot="github-activity"
       className={cn(
-        "relative max-w-full overflow-hidden rounded-[28px] border border-black/10 bg-white p-4 text-neutral-900 backdrop-blur-sm dark:border-white/10 dark:bg-neutral-950 dark:text-white",
+        "relative max-w-full overflow-hidden rounded-[28px] border border-black/10 bg-white p-4 text-neutral-900 backdrop-blur-sm dark:border-white/10 dark:bg-background dark:text-white",
         repos.length > 0 && "pb-[76px]",
         className
       )}
@@ -571,7 +571,7 @@ const GitHubActivity = ({
           data-slot="github-activity-panel"
           data-state={open ? "open" : "closed"}
           className={cn(
-            "absolute inset-x-3 bottom-3 overflow-hidden border border-black/5 bg-neutral-100/90 backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/90",
+            "absolute inset-x-3 bottom-3 overflow-hidden border border-black/5 bg-neutral-100/90 backdrop-blur-xl dark:border-white/10 dark:bg-background/90",
             open && "top-3"
           )}
           style={{ borderRadius: 18 }}

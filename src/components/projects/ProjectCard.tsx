@@ -49,7 +49,7 @@ const ProjectCard = ({
               <div className="relative flex flex-col p-4">
                 <div className="flex flex-1 flex-col">
                   {/* Card Container */}
-                  <div className="group/card border-border bg-background/50 dark:hover:bg-accent/15 relative flex flex-1 flex-col gap-1 overflow-hidden rounded-xl border p-2 shadow-sm hover:bg-neutral-100/60 dark:border-neutral-800 dark:bg-neutral-950/70">
+                  <div className="group/card border-border bg-background/50 dark:hover:bg-accent/15 relative flex flex-1 flex-col gap-1 overflow-hidden rounded-xl border p-2 shadow-sm hover:bg-neutral-100/60 dark:border-neutral-800 dark:bg-background/70">
                     <div className="relative flex flex-1 flex-col gap-1">
                       {/* Card Body wrapping screenshot and info (links to detailed slug) */}
                       <Link

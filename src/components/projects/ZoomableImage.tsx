@@ -117,7 +117,7 @@ export function ZoomableImage({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.08 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-50/90 dark:bg-neutral-950/90 p-4 md:p-8 backdrop-blur-md cursor-zoom-out"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-50/90 dark:bg-background/90 p-4 md:p-8 backdrop-blur-md cursor-zoom-out"
           >
             <DialogPrimitive.Title className="sr-only">{alt}</DialogPrimitive.Title>
             <DialogPrimitive.Close className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-10 focus:rounded focus:bg-background focus:p-2">Close image</DialogPrimitive.Close>
@@ -127,7 +127,7 @@ export function ZoomableImage({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.98, opacity: 0 }}
               transition={{ duration: 0.08, ease: 'easeOut' }}
-              className="relative max-w-5xl max-h-[75vh] overflow-hidden rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 bg-white/50 dark:bg-neutral-900/50 shadow-2xl cursor-zoom-out flex items-center justify-center"
+              className="relative max-w-5xl max-h-[75vh] overflow-hidden rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 bg-white/50 dark:bg-background/50 shadow-2xl cursor-zoom-out flex items-center justify-center"
             >
               <img
                 src={src}

@@ -84,7 +84,7 @@ const SocialLinks = () => {
             {items.map((item) => {
               return (
                 <li key={item.name}>
-                  <div className="group relative flex cursor-pointer items-center gap-4 p-4 pr-2 hover:bg-neutral-50 hover:dark:bg-neutral-900/30">
+                  <div className="group relative flex cursor-pointer items-center gap-4 p-4 pr-2 hover:bg-neutral-50 dark:hover:bg-accent/30">
                     <div className="relative size-8 shrink-0">
                       {renderIcon(item)}
                       <div className="pointer-events-none absolute inset-0 rounded-lg inset-ring-1 inset-ring-black/10 dark:inset-ring-white/15"></div>
