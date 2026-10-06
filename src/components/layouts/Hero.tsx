@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <Container className={`flex flex-col items-start justify-center`}>
       <div className="flex h-full w-full">
-        <div className="p-5">
+        <div className="p-5 max-sm:pl-2">
           <div className="w-fit rounded-[9px] border p-[3.8px] dark:border-neutral-700">
             <div className="box-border h-[92px] w-[92px] overflow-hidden rounded-[8px] border bg-neutral-200 select-none md:h-[108px] md:w-[108px] dark:bg-white">
               <Image

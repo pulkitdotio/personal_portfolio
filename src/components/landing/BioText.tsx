@@ -3,10 +3,10 @@ import SectionHeading from '../common/SectionHeading';
 const BioText = () => {
   return (
     <>
-      <SectionHeading heading="About" />
-      <div className="space-y-5 p-8">
+      <SectionHeading heading="About" classname="max-sm:px-2" />
+      <div className="space-y-5 p-8 max-sm:px-2">
         <div className="flex flex-wrap items-center gap-x-1 gap-y-2 text-base font-normal whitespace-pre-wrap text-neutral-800 max-[641px]:text-[15px]/6 md:text-base dark:text-neutral-300">
-          <ul className="list-disc space-y-2">
+          <ul className="list-disc space-y-2 max-sm:pl-3">
             <li>
               I'm a{' '}
               <b className="font-medium text-neutral-950 underline underline-offset-2 dark:text-neutral-100">

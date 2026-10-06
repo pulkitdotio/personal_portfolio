@@ -3,7 +3,6 @@
 import { useId } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
@@ -18,7 +17,7 @@ export default function EmailForm() {
   } = useForm<EmailDraft>({
     resolver: zodResolver(emailDraftSchema),
     mode: 'onTouched',
-    defaultValues: { name: '', email: '', subject: '', message: '' },
+    defaultValues: { message: '' },
   });
 
   const fieldId = (name: keyof EmailDraft) => `${id}-${name}`;
@@ -45,38 +44,6 @@ export default function EmailForm() {
       className="space-y-5"
       aria-label="Email Pulkit Sharma"
     >
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <div className="min-w-0 space-y-2">
-          <Label htmlFor={fieldId('name')}>Name</Label>
-          <Input
-            {...fieldProps('name')}
-            autoComplete="name"
-            maxLength={100}
-            placeholder="Your name"
-          />
-          {error('name')}
-        </div>
-        <div className="min-w-0 space-y-2">
-          <Label htmlFor={fieldId('email')}>Email</Label>
-          <Input
-            {...fieldProps('email')}
-            type="email"
-            autoComplete="email"
-            maxLength={254}
-            placeholder="you@example.com"
-          />
-          {error('email')}
-        </div>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor={fieldId('subject')}>Subject</Label>
-        <Input
-          {...fieldProps('subject')}
-          maxLength={150}
-          placeholder="What would you like to discuss?"
-        />
-        {error('subject')}
-      </div>
       <div className="space-y-2">
         <Label htmlFor={fieldId('message')}>Message</Label>
         <Textarea
@@ -90,7 +57,7 @@ export default function EmailForm() {
       </div>
       <div className="space-y-3">
         <p id={`${id}-draft-help`} className="text-muted-foreground text-sm">
-          All fields are required. Opens your email app with a draft for you to review and send.
+          Message is required. Opens your email app with a draft for you to review and send.
         </p>
         <Button type="submit" aria-describedby={`${id}-draft-help`}>
           Send Email

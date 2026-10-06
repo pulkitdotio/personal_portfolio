@@ -95,7 +95,7 @@
 }
 
 .dark {
-  --base: #101010;
+  --base: #030303;
   --base-foreground: oklch(0.985 0 0);
 
   --background: var(--base);
