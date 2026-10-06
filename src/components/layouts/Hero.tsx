@@ -24,15 +24,15 @@ const Hero = () => {
       <div className="flex h-full w-full">
         <div className="p-5 max-sm:pl-2">
           <div className="w-fit rounded-[9px] border p-[3.8px] dark:border-neutral-700">
-            <div className="box-border h-[92px] w-[92px] overflow-hidden rounded-[8px] border bg-neutral-200 select-none md:h-[108px] md:w-[108px] dark:bg-white">
+            <div className="h-[92px] w-[92px] overflow-hidden rounded-[8px] select-none md:h-[108px] md:w-[108px]">
               <Image
-                src="/identity/feather-profile.png"
-                alt="Pulkit Sharma's feather identity mark"
+                src="/identity/file_00000000e05c8208a0e8984bb4619186.png"
+                alt="Pulkit Sharma's profile picture"
                 height={1254}
                 width={1254}
-                sizes="(min-width: 768px) 106px, 90px"
+                sizes="(min-width: 768px) 108px, 92px"
                 preload
-                className="box-border aspect-square h-full w-full object-cover object-center transition-none"
+                className="block aspect-square h-full w-full object-cover object-center transition-none"
               />
             </div>
           </div>
