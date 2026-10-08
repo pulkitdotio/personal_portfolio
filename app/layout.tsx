@@ -9,6 +9,7 @@ import { Quote } from '@/components/common/Quote';
 import Footer from '@/components/common/Footer';
 import ScrollToTop from '@/components/common/ScrollToTop';
 import { Analytics } from '@vercel/analytics/react';
+import ClickSpark from '@/components/ui/click-spark';
 
 const geistSans = Geist({
   variable: '--font-sans',
@@ -168,19 +169,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
         />
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-          <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[110] focus:rounded focus:bg-background focus:p-3">Skip to content</a>
-          <ScrollToTop />
-          <Analytics />
-          <div className="min-h-screen bg-background">
-          <Container>
-              <Layout>
-                <main id="main-content">{children}</main>
-                <Quote />
-                <Footer />
-              </Layout>
-            </Container>
-            <div className="from-background pointer-events-none fixed inset-x-0 bottom-0 z-40 h-10 bg-linear-to-t to-transparent [mask-image:linear-gradient(to_top,black_10%,transparent)] opacity-100 backdrop-blur-[5px] select-none dark:[mask-image:linear-gradient(to_top,black_20%,transparent)]" />
-          </div>
+          <ClickSpark>
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[110] focus:rounded focus:bg-background focus:p-3">Skip to content</a>
+            <ScrollToTop />
+            <Analytics />
+            <div className="min-h-screen bg-background">
+              <Container>
+                <Layout>
+                  <main id="main-content">{children}</main>
+                  <Quote />
+                  <Footer />
+                </Layout>
+              </Container>
+              <div className="from-background pointer-events-none fixed inset-x-0 bottom-0 z-40 h-10 bg-linear-to-t to-transparent [mask-image:linear-gradient(to_top,black_10%,transparent)] opacity-100 backdrop-blur-[5px] select-none dark:[mask-image:linear-gradient(to_top,black_20%,transparent)]" />
+            </div>
+          </ClickSpark>
         </ThemeProvider>
       </body>
     </html>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Separator } from "@/components/ui/separator";
-import Container from "@/components/layouts/Container";
+import { redirect } from "next/navigation";
 import { resumeConfig } from "@/config/resume";
 
 import { siteUrl, profile } from '@/config/site';
@@ -35,27 +34,5 @@ export const metadata: Metadata = {
 };
 
 export default function ResumePage() {
-  return (
-    <Container className="py-16">
-      <div className="space-y-8">
-        <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-            Resume
-          </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            <a href={resumeConfig.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Open Pulkit Sharma’s resume</a>
-            <span className="block text-sm">If the preview is blocked or requires sign-in, use the link above to open the supplied file in Google Drive.</span>
-          </p>
-        </div>
-        <Separator />
-        <div className="mx-auto max-w-2xl">
-          <iframe
-            src={resumeConfig.url}
-            title="Pulkit Sharma’s resume"
-            className="min-h-screen w-full"
-          ></iframe>
-        </div>
-      </div>
-    </Container>
-  );
+  redirect(resumeConfig.url);
 }

@@ -1,4 +1,5 @@
 import { profile } from '@/config/site';
+import { resumeConfig } from '@/config/resume';
 import { sirinStencil } from '@/lib/fonts';
 import SendIcon from '@/components/icons/social/SendIcon';
 import Cv from '@/components/icons/social/Cv';
@@ -11,8 +12,8 @@ const SocialLinks = () => {
   const items = [
     {
       name: 'Resume',
-      href: '/resume',
-      isExternal: false,
+      href: resumeConfig.url,
+      isExternal: true,
       icon: <Cv />,
     },
     {

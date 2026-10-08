@@ -50,7 +50,7 @@ export default function EmailForm() {
           {...fieldProps('message')}
           rows={4}
           maxLength={1000}
-          className="[field-sizing:fixed] min-h-28 resize-y"
+          className="field-sizing-fixed min-h-28 resize-y"
           placeholder="Tell me about your idea or say hello…"
         />
         {error('message')}
