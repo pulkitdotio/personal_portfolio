@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ProjectCardData } from '@/config/projects/ProjectCardData';
 import { cn } from '@/lib/utils';
 import { Github } from '@/lib/techIcons';
+import styles from './project-preview.module.css';
 
 const ProjectCard = ({
   completed = ProjectCardData,
@@ -56,15 +57,23 @@ const ProjectCard = ({
                         href={items.projectDetailsPageSlug ?? items.links.details}
                         className="flex flex-1 flex-col gap-1 text-left hover:no-underline"
                       >
-                        <Image
-                          alt={items.img.alt}
-                          src={items.img.src}
-                          width={1200}
-                          height={630}
-                          sizes="(min-width: 1024px) 350px, (min-width: 768px) 308px, (min-width: 640px) calc(50vw - 74px), calc(100vw - 98px)"
-                          loading={index === 0 ? 'eager' : 'lazy'}
-                          className="h-52 w-full rounded-lg object-cover object-top"
-                        />
+                        <div
+                          className={cn(
+                            'relative flex h-52 w-full shrink-0 items-center justify-center overflow-hidden rounded-lg bg-black',
+                            styles.preview
+                          )}
+                          data-project-preview={items.img.src}
+                        >
+                          <Image
+                            alt={items.img.alt}
+                            src={items.img.src}
+                            width={1200}
+                            height={630}
+                            sizes="(min-width: 1024px) 350px, (min-width: 768px) 308px, (min-width: 640px) calc(50vw - 74px), calc(100vw - 98px)"
+                            loading={index === 0 ? 'eager' : 'lazy'}
+                            className={cn('rounded-lg', styles.screenshot)}
+                          />
+                        </div>
 
                         {/* Header with Title and Pulsing Status */}
                         <div className="mt-2.5 pt-0.5 flex items-center justify-between px-1">
