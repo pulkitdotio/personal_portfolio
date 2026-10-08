@@ -5,7 +5,7 @@ import BioText from '../landing/BioText';
 import SocialLinks from '../landing/SocialLinks';
 import RepeatSeparator from '../ui/repeat-separator';
 import Image from 'next/image';
-import { sirinStencil } from '@/lib/fonts';
+import { philosopher } from '@/lib/fonts';
 import { MapPin } from 'lucide-react';
 import { RotatingText } from '../ui/rotating-text';
 import IndiaClock from '../landing/IndiaClock';
@@ -45,7 +45,7 @@ const Hero = () => {
         </div>
         <div className="flex min-w-0 flex-1 flex-col justify-center md:gap-1">
           <h1
-            className={`${sirinStencil.className} flex w-full flex-col text-2xl font-normal text-neutral-700 md:pb-0.5 md:text-3xl dark:text-neutral-50`}
+            className={`${philosopher.className} flex w-full flex-col text-2xl font-normal text-neutral-700 md:pb-0.5 md:text-3xl dark:text-neutral-50`}
           >
             {profile.name}
           </h1>

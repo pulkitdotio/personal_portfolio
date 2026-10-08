@@ -1,6 +1,6 @@
-import { Sirin_Stencil } from 'next/font/google';
+import { Philosopher } from 'next/font/google';
 
-export const sirinStencil = Sirin_Stencil({
+export const philosopher = Philosopher({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',

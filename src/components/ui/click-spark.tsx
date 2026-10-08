@@ -49,7 +49,7 @@ interface Spark {
 // Adapted from React Bits: https://reactbits.dev/animations/click-spark
 // Keep its radial strokes/easing, with a viewport overlay and an on-demand loop.
 export default function ClickSpark({
-  sparkColor = 'var(--foreground)',
+  sparkColor = 'var(--muted-foreground)',
   sparkSize = 9,
   sparkRadius = 18,
   sparkCount = 8,

@@ -1,0 +1,39 @@
+.word {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  opacity: 0;
+  animation: roleFade 7.5s linear infinite;
+}
+
+.word:first-child {
+  opacity: 1;
+}
+
+/* Adapted from https://codepen.io/emilycan/pen/dyPjYez.
+   Each role starts 2.5s apart: fade in for 0.5s, hold for 2s,
+   then fade out for 0.5s as the next role fades in (including the loop). */
+@keyframes roleFade {
+  0% {
+    opacity: 0;
+  }
+  6.666667%,
+  33.333333% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word {
+    animation: none;
+    opacity: 0;
+  }
+
+  .word:first-child {
+    opacity: 1;
+  }
+}
