@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Doto } from 'next/font/google';
+import { Geist_Pixel } from 'next/font/google';
+import { Clock } from 'lucide-react';
 
-const doto = Doto({
-  weight: '600',
+const geistPixel = Geist_Pixel({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -28,12 +29,15 @@ const IndiaClock = () => {
   }, []);
 
   return (
-    <time
-      className={`${doto.className} inline-block w-[8ch] shrink-0 tabular-nums`}
-      aria-live="off"
-    >
-      {time}
-    </time>
+    <>
+      <Clock className="size-3 shrink-0" aria-hidden="true" />
+      <time
+        className={`${geistPixel.className} inline-block w-[8ch] shrink-0 tabular-nums`}
+        aria-live="off"
+      >
+        {time}
+      </time>
+    </>
   );
 };
 
