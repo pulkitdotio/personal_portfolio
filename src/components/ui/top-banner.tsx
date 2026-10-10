@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-// Match the reference banner's narrow 16px feather on all four edges.
+// Keep the reference's 16px feather, with a smaller fade only below the sm breakpoint.
 const bannerMask = [
-  'linear-gradient(to bottom, transparent, black 16px, black calc(100% - 16px), transparent)',
-  'linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent)',
+  'linear-gradient(to bottom, transparent, black var(--banner-fade, 16px), black calc(100% - var(--banner-fade, 16px)), transparent)',
+  'linear-gradient(to right, transparent, black var(--banner-fade, 16px), black calc(100% - var(--banner-fade, 16px)), transparent)',
 ].join(', ');
 
 const TopBanner = () => {
@@ -17,7 +17,7 @@ const TopBanner = () => {
           sizes="(min-width: 1024px) 800px, (min-width: 768px) 715px, 100vw"
           unoptimized
           loading="eager"
-          className="object-cover object-bottom"
+          className="object-cover object-bottom max-sm:[--banner-fade:8px]"
           style={{
             WebkitMaskImage: bannerMask,
             WebkitMaskComposite: 'destination-in',
