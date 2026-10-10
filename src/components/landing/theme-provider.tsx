@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useLayoutEffect, useState } from "react";
 import { MotionConfig } from 'motion/react';
 
 type Theme = "light" | "dark" | "system";
@@ -48,7 +48,8 @@ export function ThemeProvider({
 
   const [resolvedTheme, setResolvedTheme] = useState<Theme>(defaultTheme === "system" ? "light" : defaultTheme);
 
-  useEffect(() => {
+  // Apply classes before paint, including a flushed View Transition update.
+  useLayoutEffect(() => {
     const root = window.document.documentElement;
 
     const media = window.matchMedia("(prefers-color-scheme: dark)");
