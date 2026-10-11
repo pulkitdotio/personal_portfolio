@@ -86,3 +86,4 @@ skills-lock.json
 *.zip
 *.tmp
 *.temp
+.originkit/
